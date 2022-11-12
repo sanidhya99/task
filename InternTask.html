@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #nav {
+            display: grid;
+
+            grid-template-columns: 5% 50% 45%;
+            /* padding:2px; */
+            height: 10vh;
+            border-bottom: 1px solid grey;
+        }
+
+        /* .box {
+            /* background-color: aquamarine; */
+        /* border: 2px solid black;} */
+
+
+        #nav-lt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #nav-ct {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #nav-ct-tp {
+            display: flex;
+            height: 60%;
+            align-items: center;
+            font-size: 1.5rem;
+            font-family: sans-serif;
+        }
+
+        #nav-ct-bt {
+            display: flex;
+            flex-direction: row;
+            height: 40%;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        #nav-rt {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .nav-ct-bt-el {
+            margin-right: 1rem;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nav-ct-rt-el {
+            margin-right: 1.5rem;
+            display: flex;
+            flex-direction: row;
+        }
+
+        #doc-logo {
+            height: 6vh;
+            width: 3vw;
+        }
+
+        .nv-rt-img {
+            height: 6.4vh;
+            width: 2.7vw;
+        }
+
+        #nv-rt-3-2 {
+            height: 4vh;
+            width: 1.5vw;
+        }
+
+        #nv-rt-3 {
+            height: 4vh;
+            width: 3vw;
+        }
+
+        #nv-rt-el-3 {
+            border: 1px solid grey;
+            border-radius: 1rem;
+        }
+
+        #nv-rt-el-4 {
+            background-color: rgb(68, 167, 68);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            border-radius: 0.6rem;
+            height: 5.8vh;
+            /* padding: 0.09rem; */
+        }
+
+        #em {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            color: white;
+            font-family: sans-serif;
+            margin-right: 0.5vw;
+        }
+
+        .jst-al {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        #nk {
+            border-radius: 100rem;
+        }
+
+        #main {
+            height: 90vh;
+            width: 100vw;
+            /* background-color: aqua; */
+            display: flex;
+            flex-direction: row;
+        }
+
+        #main-mn {
+            width: 92vw;
+            /* background-color: blue; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        #main-sd {
+            width: 8vw;
+            /* background-color: tomato; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .mn-sd-img {
+            margin-bottom: 2.38rem;
+            height: 4.5vh;
+            width: 2.5vw;
+        }
+
+        #main-mn-tp {
+            height: 8vh;
+            display: flex;
+            flex-direction: column;
+
+            /* background-color: blue; */
+        }
+
+        #main-mn-bt {
+            height: 92vh;
+            /* background-color: tomato; */
+            display: grid;
+            grid-template-columns: repeat(11, auto);
+            grid-template-rows: repeat(23, auto);
+        }
+
+        .grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid grey;
+        }
+
+        #main-mn-tp-tp {
+            height: 4.5vh;
+            border-bottom: 1px solid grey;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #main-mn-tp-bt {
+            height: 3.5vh;
+            display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+            /* align-ite; */
+
+        }
+
+        .main-mn-tp-tp-img {
+            font-weight: bolder;
+            height: 0.8rem;
+            width: 0.8rem;
+            /* margin-right: 2vw; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #spl {
+            margin-left: 2vw;
+            margin-right: 2vw;
+        }
+
+        #main-mn-tp-bt-1 {
+            width: 19vw;
+            /* background-color: aqua; */
+            border-right: 1px solid grey;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #main-mn-tp-bt-2 {
+            width: 81vw;
+            /* background-color: tomato; */
+
+        }
+
+        #g1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 2vh;
+            width: 3vw;
+        }
+
+        #g2 {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+
+            height: 3vh;
+            width: 14vw;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <div class="box" id="nav-lt"><img src="int-task.jpg" alt="Google-doc" id="doc-logo"></div>
+        <div class="box" id="nav-ct">
+            <div id="nav-ct-tp" class="box">Untitled spreadsheet </div>
+            <div id="nav-ct-bt" class="box">
+                <div class="nav-ct-bt-el">File</div>
+                <div class="nav-ct-bt-el">Edit</div>
+                <div class="nav-ct-bt-el">View</div>
+                <div class="nav-ct-bt-el">Insert</div>
+                <div class="nav-ct-bt-el">Format</div>
+                <div class="nav-ct-bt-el">Data</div>
+                <div class="nav-ct-bt-el">Tool</div>
+                <div class="nav-ct-bt-el">Extension</div>
+                <div class="nav-ct-bt-el">Help</div>
+            </div>
+        </div>
+        <!-- <div class="box" id="ctr-bt">cb</div> -->
+        <div class="box" id="nav-rt">
+            <div class="nav-ct-rt-el"> <img src="nv-rt-1.jpg" alt="" class="nv-rt-img"> </div>
+            <div class="nav-ct-rt-el"> <img src="nv-rt-2.jpg" alt="" class="nv-rt-img"> </div>
+            <div class="nav-ct-rt-el" id="nv-rt-el-3" class="jst-al"> <img src="nv-rt-3.jpg" alt="" id="nv-rt-3"><img
+                    src="nv-rt-3-2.jpg" alt="" id="nv-rt-3-2"> </div>
+            <div class="nav-ct-rt-el" id="nv-rt-el-4" class="jst-al"> <img src="nv-rt-4.jpg" alt="" class="nv-rt-img">
+                <p id="em">Share</p>
+            </div>
+            <div class="nav-ct-rt-el"> <img src="nv-rt-5.jpg" alt="" class="nv-rt-img" id="nk"> </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="main-mn">
+            <div id="main-mn-tp">
+                <div id="main-mn-tp-tp">
+                    <h3 class="main-mn-tp-tp-img">↶</h3>
+                    <h3 class="main-mn-tp-tp-img">↷</h3>
+                    <img src="mn-tp-tp-1.jpg" alt="" class="main-mn-tp-tp-img">
+                    <img src="mn-tp-tp-2.jpg" alt="" class="main-mn-tp-tp-img">
+                    <h3 class="main-mn-tp-tp-img">|</h3>
+                    <h5 class="main-mn-tp-tp-img">100%</h5>
+                    <h6 class="main-mn-tp-tp-img">▼</h6>
+                    <h3 class="main-mn-tp-tp-img">|</h3>
+                    <h3 class="main-mn-tp-tp-img">£</h3>
+                    <h5 class="main-mn-tp-tp-img">%</h5>
+                    <h5 class="main-mn-tp-tp-img">.0←</h5>
+                    <h5 class="main-mn-tp-tp-img">.00→</h5>
+                    <h5 class="main-mn-tp-tp-img">123▼</h5>
+                    <h3 class="main-mn-tp-tp-img">|</h3>
+                    <h6 class="main-mn-tp-tp-img" id="spl">Default(Ari.▼</h6>
+                    <h3 class="main-mn-tp-tp-img">|</h3>
+                    <h5 class="main-mn-tp-tp-img">10▼</h5>
+                    <h3 class="main-mn-tp-tp-img">|</h3>
+                    <h5 class="main-mn-tp-tp-img">B</h5>
+                    <h5 class="main-mn-tp-tp-img">I</h5>
+                    <h5 class="main-mn-tp-tp-img">$</h5>
+                    <h5 class="main-mn-tp-tp-img">A</h5>
+                    <h5 class="main-mn-tp-tp-img">P</h5>
+
+
+
+                    <img src="mn-tp-tp-3.jpg" alt="" class="main-mn-tp-tp-img">
+                    <img src="mn-tp-tp-4.jpg" alt="" class="main-mn-tp-tp-img">
+                    <h3 class="main-mn-tp-tp-img">|</h3>
+                    <img src="mn-tp-tp-5.jpg" alt="" class="main-mn-tp-tp-img">
+                    <h5 class="main-mn-tp-tp-img">▼</h5>
+                    <h5 class="main-mn-tp-tp-img">↓▼</h5>
+                    <!-- <h5 class="main-mn-tp-tp-img">|↩|</h5> -->
+                    <h5 class="main-mn-tp-tp-img" style="display:flex; flex-direction:row;">
+                        <p>|</p>
+                        <p>↩</p>
+                        <p>|</p>
+                    </h5>
+                    <h5 class="main-mn-tp-tp-img">↗▼</h5>
+                    <h3 class="main-mn-tp-tp-img">|</h3>
+                    <!-- <h5 class="main-mn-tp-tp-img">↗▼</h5> -->
+                    <img src="mn-tp-tp-6.jpg" alt="" class="main-mn-tp-tp-img">
+                    <img src="mn-tp-tp-7.jpg" alt="" class="main-mn-tp-tp-img">
+                    <img src="mn-tp-tp-8.jpg" alt="" class="main-mn-tp-tp-img">
+                    <img src="mn-tp-tp-9.jpg" alt="" class="main-mn-tp-tp-img">
+                    <h5 class="main-mn-tp-tp-img">▼</h5>
+                    <h5 class="main-mn-tp-tp-img">∑</h5>
+                    <h5 class="main-mn-tp-tp-img">▼</h5>
+
+
+                </div>
+                <div id="main-mn-tp-bt">
+                    <div id="main-mn-tp-bt-1">
+                        <p id="g1">A1</p>
+                        <p id="g2">▼|fx</p>
+                    </div>
+                    <div id="main-mn-tp-bt-2"></div>
+                </div>
+            </div>
+            <div id="main-mn-bt">
+                <div class="grid"></div>
+                <div class="grid">A</div>
+                <div class="grid">B</div>
+                <div class="grid">C</div>
+                <div class="grid">D</div>
+                <div class="grid">E</div>
+                <div class="grid">F</div>
+                <div class="grid">G</div>
+                <div class="grid">H</div>
+                <div class="grid">I</div>
+                <div class="grid">J</div>
+                <div class="grid">1</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">2</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">3</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">4</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">5</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">6</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">7</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">8</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">10</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">11</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">12</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">13</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">14</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">15</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">16</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">17</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">18</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">19</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">21</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">22</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">23</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid">24</div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+            </div>
+        </div>
+        <div id="main-sd">
+            <img src="mn-sd-1.jpg" alt="" class="mn-sd-img">
+            <img src="mn-sd-2.jpg" alt="" class="mn-sd-img">
+            <img src="mn-sd-3.jpg" alt="" class="mn-sd-img">
+            <img src="mn-sd-4.jpg" alt="" class="mn-sd-img">
+            <img src="mn-sd-5.jpg" alt="" class="mn-sd-img">
+            <img src="mn-sd-6.jpg" alt="" class="mn-sd-img">
+        </div>
+    </div>
+</body>
+
+</html>
